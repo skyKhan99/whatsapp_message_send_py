@@ -152,7 +152,7 @@ def sendMessage():
     f(x)
 
 
-sendIcon = PhotoImage(file='C:/phytonicns/sendmessage.png')
+sendIcon = PhotoImage(file='phytonicns/sendmessage.png')
 
 btnSend = Button(frame1, text="Send", image=sendIcon, command=sendMessage)
 btnSend.place(relx=0.85, rely=0.6)
