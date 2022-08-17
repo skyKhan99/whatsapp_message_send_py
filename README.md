@@ -7,7 +7,7 @@ A program for send whatsapp messages directly or specific times.
 
 # Fun Page
 ![Screenshot](3.png)
-![Screenshot](4.png)
-
-#Theme Page
 ![Screenshot](5.png)
+
+# Theme Page
+![Screenshot](4.png)
