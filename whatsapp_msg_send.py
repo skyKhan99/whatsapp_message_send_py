@@ -10,7 +10,7 @@ from tkinter import filedialog as fd
 ana = Tk()
 ana.geometry('600x200')
 ana.resizable(False, False)
-wpLogo = PhotoImage(file='phytonicns/whatsapp.png')
+wpLogo = PhotoImage(file='C:/phytonicns/whatsapp.png')
 ana.iconphoto(True, wpLogo)
 ana.title("Whatsapp Message Sender")
 
@@ -83,10 +83,21 @@ selects = (
 rdy1 = selects[1]
 rdy2 = selects[0]
 
-radioTimed = Radiobutton(frame1, text=rdy1[0], value=rdy1[1],variable=selected)
+
+def while_direct_selected():
+    entryHour.configure(state='disabled')
+    entryMinute.configure(state='disabled')
+
+
+def while_specific_selected():
+    entryHour.configure(state='normal')
+    entryMinute.configure(state='normal')
+
+
+radioTimed = Radiobutton(frame1, text=rdy1[0], value=rdy1[1],variable=selected, command=while_specific_selected)
 radioTimed.place(relx=0.55, rely=0.1)
 
-radioDirect = Radiobutton(frame1, text=rdy2[0], value=rdy2[1],variable=selected)
+radioDirect = Radiobutton(frame1, text=rdy2[0], value=rdy2[1],variable=selected, command=while_direct_selected)
 radioDirect.place(relx=0.55, rely=0.3)
 
 labelHour = Label(frame1, text="Hour")
@@ -143,7 +154,7 @@ def f(x):
                                           entryMessage.get(),
                                           hour,
                                           minute)
-            except: messagebox.showerror("error","¯\_(ツ)_/¯")
+            except: messagebox.showerror("error", "¯\_(ツ)_/¯")
             return
 
 
@@ -152,7 +163,7 @@ def sendMessage():
     f(x)
 
 
-sendIcon = PhotoImage(file='phytonicns/sendmessage.png')
+sendIcon = PhotoImage(file='C:/phytonicns/sendmessage.png')
 
 btnSend = Button(frame1, text="Send", image=sendIcon, command=sendMessage)
 btnSend.place(relx=0.85, rely=0.6)
@@ -166,7 +177,7 @@ textHandWrite.place(relx=0.2, rely=0.1)
 
 def handwrite():
     elyazisi = textHandWrite.get(0.0, 'end')
-    pywhatkit.text_to_handwriting(elyazisi, "C:/Users/gokhan.hacioglu/Desktop/el_yazim.png", (0,0,138))
+    pywhatkit.text_to_handwriting(elyazisi, "C:/Users/gokhan.hacioglu/Desktop/el_yazim.png", (0, 0, 138))
 
 
 btnHandWrite = Button(frame2, text="Print", command=handwrite)
