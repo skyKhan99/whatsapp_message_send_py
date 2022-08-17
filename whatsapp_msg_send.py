@@ -173,7 +173,7 @@ btnHandWrite = Button(frame2, text="Print", command=handwrite)
 btnHandWrite.place(rely=0.5, relx=0.1)
 
 seperator = ttk.Separator(frame2, orient="vertical")
-seperator.place(relx=0.55, rely=0, relheight=1, relwidth=0.4)
+seperator.place(relx=0.55, rely=0, relheight=1)
 
 
 def select_files():
