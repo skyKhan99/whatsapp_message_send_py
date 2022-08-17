@@ -10,7 +10,7 @@ from tkinter import filedialog as fd
 ana = Tk()
 ana.geometry('600x200')
 ana.resizable(False, False)
-wpLogo = PhotoImage(file='C:/phytonicns/whatsapp.png')
+wpLogo = PhotoImage(file='phytonicns/whatsapp.png')
 ana.iconphoto(True, wpLogo)
 ana.title("Whatsapp Message Sender")
 
